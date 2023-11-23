@@ -11,7 +11,7 @@ const Listarticle = () => {
   const[articles,setArticles]=useState([])
 
   const getarticles=async()=>{
-    await axios.get("https://back-end-ecommerce-six.vercel.app/api/articles")
+    await axios.get("https://back-end-ecommerce-theta.vercel.app/api/articles")
     .then(res=>{
       setArticles(res.data)
     })

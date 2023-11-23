@@ -14,7 +14,7 @@ const Listcategorie = () => {
 //declaration methode getcategories:
   const getcategories=async()=>{
   
-    await axios.get("https://back-end-ecommerce-six.vercel.app/api/categories")
+    await axios.get("https://back-end-ecommerce-theta.vercel.app/api/categories")
      .then(res=>{
         setCategories(res.data)
       })

@@ -12,7 +12,7 @@ useEffect( ()=>{
 
   const getscategories=async()=>{
     
-    await axios.get("https://back-end-ecommerce-six.vercel.app/api/scategories")
+    await axios.get("https://back-end-ecommerce-theta.vercel.app/api/scategories")
     .then(res=>{
     setScategories(res.data)
   })
