@@ -51,6 +51,7 @@ const Menu = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
   );
 }
 

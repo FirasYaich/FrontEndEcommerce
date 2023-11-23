@@ -1,5 +1,14 @@
 import axios from 'axios'
+
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+
 import React, { useEffect, useState } from 'react'
+import Table from 'react-bootstrap/Table';
+
+import { Link } from 'react-router-dom';
 
 const Listarticle = () => {
   
@@ -20,16 +29,29 @@ const Listarticle = () => {
     })
   }
   return (
-    <div>
-      Liste Articles
-      <table className='table table-stripped'>
+<div className="container">
+<div >
+<nav className="navbar navbar-expand-lg navbar-dark bg-success">
+<div className="container-fluid">
+<Link className="btn btn-outline-light" to="/insertart">
+Ajouter article
+</Link>
+</div>
+</nav>
+</div>
+<div className="py-4">
+
+  
+      <Table striped bordered hover>
       <thead>
           <th>Nom Article  </th>
           <th>Image Article</th>
           <th>Marque Article </th>
           <th>Prix Article </th>
           <th>Quantité En Stoque </th>
-          <th>Reference Article </th>
+          <th>Reference  </th>
+          <th> Modifier </th>
+          <th> Supprimer </th>
 
         </thead>
         <tbody>
@@ -40,11 +62,18 @@ const Listarticle = () => {
           <td>{art.marque}</td>
           <td>{art.prix}</td>
           <td>{art.qtestock}</td>
-          <td>{art.reference}</td>
-          <td>{art.nomscategorie}</td>     
+          <td>{art.reference}</td>    
           <td>
-            <botton className="btn btn-warning"> Modifier </botton>
-            <botton className="btn btn-danger" > Supprimer </botton>
+          <Button variant="outline-success">
+          <i class="fa-solid fa-pen-to-square"></i>
+          Modifier
+          </Button>
+          </td>
+          <td>
+          <Button variant="outline-danger">
+          <i class="fa-solid fa-trash"></i>
+          Supprimer
+          </Button>
           </td>
         </tr>
 
@@ -52,10 +81,10 @@ const Listarticle = () => {
           
         </tbody>
 
-      </table>
-
-    </div>
-  )
+        </Table>
+</div>
+</div>
+)
 }
 
 export default Listarticle
