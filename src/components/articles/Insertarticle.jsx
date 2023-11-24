@@ -45,7 +45,9 @@ const onSubmit = async (e) => {
 <h4 align="center">Ajout Article</h4>
 <div className='form mt-3'>
 <Form className="border p-3" >
+
 <Row className="mb-2">
+
 <Form.Group as={Col} md="6" >
 <Form.Label >Référence *</Form.Label>
 <Form.Control
@@ -55,6 +57,7 @@ placeholder="Référence"
 value={reference}
 onChange={(e)=>setReference(e.target.value)}
 />
+
 </Form.Group>
 <Form.Group as={Col} md="6">
 <Form.Label>Désignation *</Form.Label>
@@ -66,8 +69,11 @@ value={designation}
 onChange={(e)=>setDesignation(e.target.value)}
 />
 </Form.Group>
+
 </Row>
+
 <Row className="mb-2">
+
 <Form.Group className="col-md-6">
 <Form.Label>Marque *</Form.Label>
 <Form.Control
@@ -78,6 +84,7 @@ value={marque}
 onChange={(e)=>setMarque(e.target.value)}
 />
 </Form.Group>
+
 <Form.Group as={Col} md="6">
 <Form.Label>Prix</Form.Label>
 <Form.Control
@@ -87,8 +94,11 @@ value={prix}
 onChange={(e)=>setPrix(e.target.value)}
 />
 </Form.Group>
+
 </Row>
+
 <Row className="mb-3">
+
 <Form.Group className="col-md-6 ">
 <Form.Label>
 Qté stock<span className="req-tag">*</span>
@@ -101,6 +111,7 @@ onChange={(e)=>setQtestock(e.target.value)}
 placeholder="Qté stock"
 />
 </Form.Group>
+
 <Form.Group as={Col} md="6">
 <Form.Label>Image</Form.Label>
 <Form.Control
@@ -110,6 +121,7 @@ value={imageart}
 onChange={(e)=>setImageart(e.target.value)}
 />
 </Form.Group>
+
 <Form.Group as={Col} md="12">
 <Form.Label> Sous Catégorie</Form.Label>
 <Form.Control
@@ -122,8 +134,11 @@ onChange={(e)=>setScategories(e.target.value)}
 <option value={scat._id}> {scat.nomscategorie}</option>
 )}
 </Form.Control>
+
 </Form.Group>
+
 </Row>
+
 <button type="submit" className="btn btn-outline-primary">
 Submit
 </button>

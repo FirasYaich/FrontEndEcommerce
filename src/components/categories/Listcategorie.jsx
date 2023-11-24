@@ -1,5 +1,11 @@
 import axios from 'axios'
+
+import Button from 'react-bootstrap/Button';
+
 import React, { useEffect, useState } from 'react'
+import Table from 'react-bootstrap/Table';
+
+import { Link } from 'react-router-dom';
 
 const Listcategorie = () => {
 
@@ -26,9 +32,20 @@ const Listcategorie = () => {
   
   
   return (
-    <div>
-      Liste Categories
-      <table className='table table-stripped'>
+<div className="container">   
+<div >
+<nav className="navbar navbar-expand-lg navbar-dark bg-success">
+<div className="container-fluid">
+<Link className="btn btn-outline-light" to="/insertcat">
+Ajouter Catégories
+</Link>
+</div>
+</nav>
+</div>
+
+<div className="py-4">
+
+<Table className="table border shadow">
       <thead>
           <th>Nom Categorie  </th>
           <th>Image Categorie</th>
@@ -40,9 +57,19 @@ const Listcategorie = () => {
         <tr key={index}>
           <td>{cat.nomcategorie}</td>
           <td><img src={cat.imagecategorie} width={80} height={80}/></td>
+          
           <td>
-            <botton className="btn btn-warning"> Modifier </botton>
-            <botton className="btn btn-danger" > Supprimer </botton>
+          <Button variant="outline-success">
+          <i class="fa-solid fa-pen-to-square"></i>
+          Modifier
+          </Button>
+          </td>
+          
+          <td>
+          <Button variant="outline-danger">
+          <i class="fa-solid fa-trash"></i>
+          Supprimer
+          </Button>
           </td>
         </tr>
 
@@ -50,8 +77,10 @@ const Listcategorie = () => {
           
         </tbody>
 
-      </table>
-    </div>
+      </Table>
+    
+  </div>
+</div>
   )
 }
 

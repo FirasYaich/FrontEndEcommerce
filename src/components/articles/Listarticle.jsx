@@ -42,7 +42,7 @@ Ajouter article
 <div className="py-4">
 
   
-      <Table striped bordered hover>
+      <Table className="table border shadow">
       <thead>
           <th>Nom Article  </th>
           <th>Image Article</th>
